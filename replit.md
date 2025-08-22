@@ -70,3 +70,21 @@ Preferred communication style: Simple, everyday language.
 - **date-fns**: Date manipulation utilities
 - **clsx & tailwind-merge**: Conditional CSS class utilities
 - **wouter**: Lightweight routing library
+
+# Deployment Architecture
+
+## Current Deployment Setup
+- **Frontend Deployment**: Vercel platform for React application hosting
+- **Backend Deployment**: Akash Network for decentralized Express.js API hosting
+- **Database**: PostgreSQL (configurable for Neon, Supabase, or other providers)
+
+## Deployment Configuration
+- **Akash Network**: Uses `deploy.yml` SDL configuration for containerized backend deployment
+- **Vercel**: Uses `vercel.json` for frontend static site deployment with environment variable support
+- **Docker**: Backend containerization with Node.js 20 Alpine base image
+- **CORS**: Production CORS configuration for cross-origin requests between Vercel frontend and Akash backend
+
+## Environment Management
+- **Frontend**: Environment-specific API URL configuration via VITE_API_URL
+- **Backend**: Production CORS origin configuration and database connection management
+- **Security**: Separate environment files for development and production configurations

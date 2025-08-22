@@ -1,0 +1,51 @@
+---
+version: "2.0"
+
+services:
+  temporal-ai-backend:
+    image: node:20-alpine
+    expose:
+      - port: 5000
+        as: 80
+        to:
+          - global: true
+    env:
+      - NODE_ENV=production
+      - PORT=5000
+    command:
+      - "sh"
+      - "-c"
+    args:
+      - |
+        cd /app &&
+        npm install &&
+        npm run build:server &&
+        npm run start:server
+
+profiles:
+  compute:
+    temporal-ai-backend:
+      resources:
+        cpu:
+          units: 1.0
+        memory:
+          size: 1Gi
+        storage:
+          size: 2Gi
+  placement:
+    dcloud:
+      attributes:
+        host: akash
+      signedBy:
+        anyOf:
+          - "akash1365yvmc4s7awdyj3n2sav7xfx76adc6dnmlx63"
+      pricing:
+        temporal-ai-backend:
+          denom: uakt
+          amount: 1000
+
+deployment:
+  temporal-ai-backend:
+    dcloud:
+      profile: temporal-ai-backend
+      count: 1
