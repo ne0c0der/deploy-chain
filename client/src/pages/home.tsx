@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-temporal-background overflow-x-hidden">
+    <div className="min-h-screen bg-temporal-background dark:bg-temporal-background overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <AboutSection />

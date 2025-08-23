@@ -10,28 +10,28 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="pt-24 pb-12 bg-gradient-to-br from-white to-temporal-background">
+    <section className="pt-24 pb-12 bg-gradient-to-br from-background to-temporal-background dark:from-background dark:to-temporal-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <h1 className="text-5xl lg:text-6xl font-bold text-temporal-primary mb-6 leading-tight">
+            <h1 className="text-5xl lg:text-6xl font-bold text-temporal-primary dark:text-temporal-primary mb-6 leading-tight">
               Building the Future of{" "}
-              <span className="gradient-text">Artificial Intelligence</span>
+              <span className="gradient-text animate-pulse-subtle">Artificial Intelligence</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               Temporal AI Technologies develops cutting-edge AI platforms that transform how businesses and individuals interact with artificial intelligence. Our ecosystem of products delivers intelligent automation, enhanced productivity, and seamless AI integration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={scrollToProjects}
-                className="bg-temporal-primary hover:bg-temporal-primary/90 text-white px-8 py-4 h-auto font-medium"
+                className="bg-temporal-primary hover:bg-temporal-primary/90 text-white px-8 py-4 h-auto font-medium button-glow focus-ring"
                 data-testid="button-explore-projects"
               >
                 Explore Our Projects
               </Button>
               <Button 
                 variant="outline"
-                className="border-2 border-temporal-secondary text-temporal-secondary hover:bg-temporal-secondary hover:text-white px-8 py-4 h-auto font-medium"
+                className="border-2 border-temporal-secondary text-temporal-secondary hover:bg-temporal-secondary hover:text-white px-8 py-4 h-auto font-medium focus-ring"
                 data-testid="button-learn-more"
               >
                 Learn More
@@ -41,7 +41,7 @@ export default function HeroSection() {
           
           <div className="relative animate-slide-up">
             <div className="relative h-96 flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-temporal-secondary/20 to-temporal-accent/20 rounded-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-temporal-secondary/20 to-temporal-accent/20 rounded-3xl animate-glow"></div>
               <div className="relative grid grid-cols-3 gap-4 p-8">
                 <div className="w-16 h-16 bg-temporal-secondary rounded-xl animate-float flex items-center justify-center" style={{animationDelay: '0s'}}>
                   <Bot className="text-white w-8 h-8" />

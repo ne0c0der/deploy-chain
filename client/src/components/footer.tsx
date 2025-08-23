@@ -47,7 +47,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-temporal-primary text-white py-16">
+    <footer className="bg-temporal-primary dark:bg-temporal-primary text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Company Info */}

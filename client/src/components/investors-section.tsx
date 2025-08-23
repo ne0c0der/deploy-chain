@@ -80,14 +80,14 @@ export default function InvestorsSection() {
   ];
 
   return (
-    <section id="investors" className="section-padding bg-white">
+    <section id="investors" className="section-padding bg-background dark:bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-temporal-primary mb-6" data-testid="heading-partnerships">
+            <h2 className="text-4xl font-bold text-temporal-primary dark:text-temporal-primary mb-6 animate-fade-in" data-testid="heading-partnerships">
               Strategic Partnerships
             </h2>
-            <p className="text-xl text-gray-600 mb-8" data-testid="text-partnerships-description">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in" data-testid="text-partnerships-description">
               Join leading investors and technology partners in shaping the future of artificial intelligence. Explore investment opportunities and strategic collaboration possibilities.
             </p>
             
@@ -110,7 +110,7 @@ export default function InvestorsSection() {
             </div>
           </div>
           
-          <div className="bg-gradient-to-br from-temporal-background to-white rounded-3xl p-8 border border-temporal-border">
+          <div className="bg-gradient-to-br from-temporal-background to-background dark:from-temporal-background dark:to-background rounded-3xl p-8 border border-temporal-border dark:border-temporal-border card-hover">
             <h3 className="text-2xl font-bold text-temporal-primary mb-6" data-testid="heading-partner-portal">
               Partner Portal Access
             </h3>

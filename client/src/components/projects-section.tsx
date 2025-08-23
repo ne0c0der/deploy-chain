@@ -53,11 +53,11 @@ export default function ProjectsSection() {
   const placeholderIcons = [Monitor, Code, GitBranch, Infinity];
 
   return (
-    <section id="projects" className="section-padding bg-gradient-to-br from-temporal-background to-white">
+    <section id="projects" className="section-padding bg-gradient-to-br from-temporal-background to-background dark:from-temporal-background dark:to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-temporal-primary mb-6" data-testid="heading-ecosystem">Our AI Ecosystem</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="text-ecosystem-description">
+          <h2 className="text-4xl font-bold text-temporal-primary dark:text-temporal-primary mb-6 animate-fade-in" data-testid="heading-ecosystem">Our AI Ecosystem</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto animate-fade-in" data-testid="text-ecosystem-description">
             Explore our comprehensive suite of AI platforms designed to transform industries and enhance human productivity.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function ProjectsSection() {
             return (
               <div 
                 key={index}
-                className="bg-white rounded-3xl p-8 shadow-lg hover-lift border border-temporal-border"
+                className="bg-background dark:bg-background rounded-3xl p-8 shadow-lg hover-lift card-hover border border-temporal-border dark:border-temporal-border focus-ring"
                 data-testid={`card-project-${index}`}
               >
                 <div className="flex items-center mb-6">
@@ -76,7 +76,7 @@ export default function ProjectsSection() {
                     <project.icon className="text-white w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-temporal-primary" data-testid={`heading-project-${index}`}>
+                    <h3 className="text-2xl font-bold text-temporal-primary dark:text-temporal-primary" data-testid={`heading-project-${index}`}>
                       {project.title}
                     </h3>
                     <Badge className={`${project.statusColor} text-white`} data-testid={`badge-status-${index}`}>

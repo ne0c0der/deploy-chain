@@ -78,13 +78,13 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-br from-temporal-background to-white">
+    <section id="contact" className="section-padding bg-gradient-to-br from-temporal-background to-background dark:from-temporal-background dark:to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-temporal-primary mb-6" data-testid="heading-contact">
+          <h2 className="text-4xl font-bold text-temporal-primary dark:text-temporal-primary mb-6 animate-fade-in" data-testid="heading-contact">
             Get in Touch
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="text-contact-description">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto animate-fade-in" data-testid="text-contact-description">
             Ready to explore how Temporal AI can transform your business? We'd love to hear from you.
           </p>
         </div>
@@ -98,10 +98,10 @@ export default function ContactSection() {
                   <info.icon className="text-white w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-temporal-primary mb-2" data-testid={`heading-contact-info-${index}`}>
+                  <h3 className="font-semibold text-temporal-primary dark:text-temporal-primary mb-2" data-testid={`heading-contact-info-${index}`}>
                     {info.title}
                   </h3>
-                  <div className="text-gray-600">
+                  <div className="text-gray-600 dark:text-gray-300">
                     {info.details.map((detail, detailIndex) => (
                       <p key={detailIndex} data-testid={`text-contact-detail-${index}-${detailIndex}`}>
                         {detail}
@@ -114,7 +114,7 @@ export default function ContactSection() {
           </div>
           
           {/* Contact Form */}
-          <div className="lg:col-span-2 bg-white rounded-3xl p-8 shadow-lg border border-temporal-border">
+          <div className="lg:col-span-2 bg-background dark:bg-background rounded-3xl p-8 shadow-lg border border-temporal-border dark:border-temporal-border card-hover">
             <form onSubmit={handleSubmit} className="space-y-6" data-testid="form-contact">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -123,6 +123,7 @@ export default function ContactSection() {
                   </Label>
                   <Input
                     id="name"
+                    className="focus-ring"
                     type="text"
                     value={formData.name}
                     onChange={(e) => updateFormData("name", e.target.value)}

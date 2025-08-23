@@ -48,6 +48,14 @@
   --temporal-background: hsl(0, 0%, 98%);
   --temporal-text: hsl(0, 0%, 20%);
   --temporal-border: hsl(0, 0%, 90%);
+  
+  /* Dark mode temporal colors */
+  --temporal-primary-dark: hsl(0, 0%, 98%);
+  --temporal-secondary-dark: hsl(210, 79%, 65%);
+  --temporal-accent-dark: hsl(160, 100%, 50%);
+  --temporal-background-dark: hsl(0, 0%, 8%);
+  --temporal-text-dark: hsl(0, 0%, 85%);
+  --temporal-border-dark: hsl(0, 0%, 20%);
 }
 
 .dark {
@@ -70,6 +78,14 @@
   --border: hsl(0, 0%, 15%);
   --input: hsl(0, 0%, 12%);
   --ring: hsl(210, 79%, 57%);
+  
+  /* Dark mode temporal colors */
+  --temporal-primary: var(--temporal-primary-dark);
+  --temporal-secondary: var(--temporal-secondary-dark);
+  --temporal-accent: var(--temporal-accent-dark);
+  --temporal-background: var(--temporal-background-dark);
+  --temporal-text: var(--temporal-text-dark);
+  --temporal-border: var(--temporal-border-dark);
 }
 
 @layer base {
@@ -124,6 +140,46 @@
   .animate-slide-up {
     animation: slideUp 0.8s ease-out;
   }
+  
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .focus-ring {
+    @apply ring-2 ring-temporal-secondary ring-offset-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-temporal-secondary focus-visible:ring-offset-2;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .card-hover:hover {
+    @apply shadow-xl shadow-temporal-secondary/10 scale-[1.02] border-temporal-secondary/30;
+  }
+  
+  .button-glow {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .button-glow:hover::before {
+    left: 100%;
+  }
 }
 
 @layer utilities {
@@ -160,5 +216,23 @@
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px -10px var(--temporal-secondary);
+  }
+  to {
+    box-shadow: 0 0 20px -5px var(--temporal-accent);
   }
 }
