@@ -7,13 +7,13 @@ export default function ProjectsSection() {
     {
       icon: Bot,
       title: "Temporal Assistants",
-      status: "Live Platform",
-      statusColor: "bg-temporal-accent",
+      status: "In Development",
+      statusColor: "bg-orange-500",
       description: "Our flagship AI assistant platform offering personalized productivity enhancement, intelligent automation, and seamless workflow integration for businesses and individuals.",
       features: ["Natural Language Processing", "Workflow Automation"],
-      buttonText: "Launch Platform",
-      buttonVariant: "default" as const,
-      buttonClass: "bg-temporal-secondary hover:bg-temporal-secondary/90"
+      buttonText: "Learn More",
+      buttonVariant: "outline" as const,
+      buttonClass: "border-temporal-secondary text-temporal-secondary hover:bg-temporal-secondary hover:text-white"
     },
     {
       icon: Layers,

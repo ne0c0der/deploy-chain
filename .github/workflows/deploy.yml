@@ -96,4 +96,4 @@ jobs:
             --yes
         env:
           AKASH_CHAIN_ID: akashnet-2
-          AKASH_NODE: https://rpc.akash.forbole.com:443
+          AKASH_NODE: https://rpc.akash.forbole.com:443 
