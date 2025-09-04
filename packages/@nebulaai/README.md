@@ -87,4 +87,6 @@ npm run type-check
 
 ## License
 
-MIT © NebulaAI
+MIT © 2024 Temporal AI Technologies Inc
+
+All rights reserved. This software and associated documentation files (the "Software") are the proprietary work of Temporal AI Technologies Inc.

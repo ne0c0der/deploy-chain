@@ -1,3 +1,10 @@
+/**
+ * @nebulaai/ui-components
+ * 
+ * Copyright (c) 2024 Temporal AI Technologies Inc
+ * Licensed under the MIT License
+ */
+
 // Utility exports
 export { cn } from "./utils"
 

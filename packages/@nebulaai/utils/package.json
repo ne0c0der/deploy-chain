@@ -27,7 +27,7 @@
     "classnames",
     "helpers"
   ],
-  "author": "NebulaAI",
+  "author": "Temporal AI Technologies Inc",
   "license": "MIT",
   "dependencies": {
     "clsx": "^2.1.1",
