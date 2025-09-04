@@ -41,7 +41,7 @@ The `Dockerfile` is already configured. Update the `deploy.yml` if needed:
 ```yaml
 services:
   temporal-ai-backend:
-    image: your-registry/temporal-ai-backend:latest
+    image: nebulaai/temporal-ai-backend:latest
     # ... rest of configuration
 ```
 

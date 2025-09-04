@@ -1,0 +1,18 @@
+{
+  "name": "@nebulaai/packages",
+  "version": "1.0.0",
+  "description": "NebulaAI component packages workspace",
+  "private": true,
+  "workspaces": [
+    "@nebulaai/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "dev": "npm run dev --workspaces",
+    "type-check": "npm run type-check --workspaces"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.3"
+  }
+}
